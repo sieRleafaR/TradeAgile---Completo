@@ -1,0 +1,73 @@
+:root {
+    --azul-tema: #1E5E8B;
+    --azul-tema-escuro: #004AAD;
+    --azul-tema-claro: #d4e9fa;
+    --amarelo-tema: #ffde59;
+    --cinza-tema: #D9D9D9;
+}
+.cabeca{
+    background-color: var(--azul-tema);
+    align-items: center;
+    box-shadow: inset 0 -2px 0 0 var(--amarelo-tema);
+    display: flex;
+    grid-area: header;
+    height: 10vh;
+    img{
+        margin-left: 5% ;
+        margin-right: 5%;
+        width: 80px;
+        border: 3px solid var(--azul-tema-claro);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    a{
+        cursor: pointer;
+        transition: 400ms;
+        text-decoration: none;
+        color: white;
+        font-family: Roboto;
+        font-size: 18px;
+        text-align: center;
+        width: 8%;
+        padding: 10px;
+        border-radius: 12px;
+    }
+    a:hover{
+        background-color: var(--azul-tema-escuro);
+        color: var(--amarelo-tema);
+        scale: 1.05;
+    }
+
+    .lgbBtn{
+        position: absolute;
+        right: 2%;
+        height: 42px;
+        color: var(--amarelo-tema);
+        width: 100px;
+        border: 2px solid var(--amarelo-tema);
+    }
+}
+.peGrande{
+    background-color: var(--azul-tema);
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+}
+.redes{
+    text-align: left;
+    width: 94%;
+    img{
+        padding-left: 20px;
+        width: 2%;
+        cursor: pointer;
+    }
+}
+.nosPe{
+    color: white;
+    padding-left: 10px;
+    width: 6%;
+    font-weight: bold;
+    text-align: left;
+    border-left: 2px solid white;
+}

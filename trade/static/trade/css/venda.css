@@ -1,0 +1,182 @@
+{% load static%}
+@import "root.css";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    text-align: center;
+}
+body{
+    background-image: url(../img/loja3.jpg);
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: 100%;
+    height: 100vh;
+    width: 100vw;
+}
+#topo {
+    width: 40%;
+    height:10%;
+    background-color:#FFDE59;
+    position: relative;
+    top: 10%;
+    left: 55%;
+    border-radius:15px 15px  0   0 ;
+}
+#listra{
+    background-color: rgba(30, 94, 139, 0.73);
+    height: 70%;
+    width: 40%;
+    position: relative;
+    top: 10%;
+    left: 55%;
+    border-radius: 0   0 15px 15px ;
+}
+
+form label {
+    color:var(--amarelo-tema);
+}
+.containerForm{
+    width: 100%;
+    height: 80%;
+}
+form input,option,select {
+    color: var(--amarelo-tema);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #FFDE59;
+    background: none;
+    height: 30px;
+    width: 30%;
+}
+input:focus{
+    outline: none;
+}
+form *{
+    margin: 25px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button {
+    position: relative;
+    height: 8vh;
+    width: 12vw;
+    border-radius: 15px;
+    border: 2px solid #FFDE59;
+    color:#FFDE59;
+    background-color: #1E5E8B;
+    font-size: 20px;
+    bottom: 50%;
+}
+h1{
+    position: absolute;
+    left: 40%;
+    top: 19%;
+    color: #1E5E8B;
+}
+
+.button {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  bottom: 90%;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.button:before {
+  border: 4px solid var(--amarelo-tema);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button:after {
+  border: 4px solid var(--azul-tema-escuro);
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.button:hover:before,
+.button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: var(--amarelo-tema);
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+.messages{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    height: 25%;
+    width: 20%;
+    font-size: 1.5vw;
+    text-align: left;
+    background: rgba(0, 74, 173, 0.59);
+    border-radius: 0 10% 10% 0;
+    animation: fadeIn 600ms ease-in-out; /* Aplica a animação */
+    h2{
+        padding-left: 10px;
+        text-align: left;
+        position: relative;
+        left: 0;
+        top: 50%;
+        transform: translate(0,-50%);
+        color: white;
+    }
+}
+@keyframes fadeIn {
+    from {
+        transform: translate(-100%, -50%); /* Move o elemento para cima */
+    }
+    to {
+        transform: translate(0, -50%); /* Elemento na posição original */
+    }
+}

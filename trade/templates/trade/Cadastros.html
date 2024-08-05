@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Página de Cadastros</title>
+    <link rel="stylesheet" href="{% static 'trade/css/cadastrosG.css' %}">
+</head>
+<body>
+    <header class="cabeca">
+        <img onclick="window.location.href='{% url 'home' %}'" src="{% static 'trade/img/tradeLogo.png' %}">
+        <a href="{% url 'cadastros' %}">Cadastros</a>
+        <a href="{% url 'demonstrativo_tabelas' %}">Tabelas</a>
+        <a href="{% url 'galeria_produtos' %}">Galeria</a>
+        <a href="{% url 'realizar_venda' %}">Vender</a>
+        <a class="lgbBtn" href="{% url 'cadastroUser' %}">Cadastrar Usuário</a>
+    </header>
+    <div class="contTudo">
+        <div class="contCadastros">
+            <div class="infoBox">
+                <h1>Cadastros<br>Trade.Agile</h1>
+                <h4>Seja bem-vindo a página de cadastros da Trade.Agile</h4>
+                <a href="{% url 'cadastroUser' %}">Cadastrar Usuário</a>
+            </div>
+            <div class="cadastrosBox">
+                <h1>Cadastrar:</h1>
+                <a href="{% url 'cadastro_produto' %}">Produto</a>
+                <a href="{% url 'cadastro_vendedor' %}">Vendedor</a>
+                <a href="{% url 'cadastro_fornecedor' %}">Fornecedor</a>
+                <a href="{% url 'cadastro_clientes' %}">Cliente</a>
+                <h2></h2>
+            </div>
+        </div>
+    </div>
+    <footer class="peGrande">
+        <div class="redes">
+            <img src="{% static 'trade/img/XLogo.png' %}">
+            <img src="{% static 'trade/img/instagramLogo.png' %}">
+            <img src="{% static 'trade/img/facebookLogo.png' %}">
+        </div>
+        <div class="nosPe">Trade.Agile<br>Prime</div>
+    </footer>
+</body>
+</html>
